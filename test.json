@@ -1,0 +1,5 @@
+{
+	"sql": "select name, description from projects where name = :?name",
+	"sqlParams": {"name": "sql-to-csv"},
+	"csvDelimiter": ";"
+}
