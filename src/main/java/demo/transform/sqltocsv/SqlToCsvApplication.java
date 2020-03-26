@@ -31,7 +31,7 @@ public class SqlToCsvApplication {
 
 	@PostMapping(path= "", consumes = "application/json", produces = "text/plain")
 	public String convertSqlToCsv(@RequestBody SQL2CSVRequest request) throws Exception {
-		Assert.notNull(request, "Accept json for sql, sqlParams, csvDelimitor");
+		Assert.notNull(request, "Accept json for sql, sqlParams, csvDelimiter");
 		
 		Map<String, Object> headers = new HashMap<>();
 		headers.put("csvDelimiter", StringUtils.isEmpty(request.getCsvDelimiter())? ",": request.getCsvDelimiter());
